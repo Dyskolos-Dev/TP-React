@@ -1,7 +1,4 @@
-// src/composants/Layout.tsx
-//
-// L'en-tête et le pied de page ne sont écrits qu'ici, une seule fois.
-// <Outlet /> affiche la page courante au milieu.
+
 
 import { NavLink, Outlet } from "react-router-dom";
 import { useAuth } from "../contextes/AuthContext";

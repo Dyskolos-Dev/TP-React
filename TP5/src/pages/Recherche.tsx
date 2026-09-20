@@ -1,4 +1,4 @@
-// src/pages/Recherche.tsx
+
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -10,13 +10,10 @@ export function Recherche() {
   const [terme, setTerme] = useState("");
   const termeNettoye = terme.trim();
 
-  // La requête ne part que 400 ms après la dernière frappe.
   const termeDiffere = useDebounce(termeNettoye, 400);
   const url = termeDiffere ? urlRecherche(termeDiffere) : null;
   const { donnees, chargement, erreur } = useFetch<ReponseRecherche>(url);
 
-  // Sans ça, il y a un blanc entre "je tape" et "Chargement…" pendant
-  // que le debounce rattrape la frappe.
   const enAttenteDebounce = termeNettoye !== "" && termeNettoye !== termeDiffere;
 
   return (

@@ -1,4 +1,4 @@
-// src/composants/ListeInscriptions.tsx
+
 import type { InscriptionEnregistree } from "../lib/inscription";
 import { Badge } from "./Badge";
 import { Bouton } from "./Bouton";

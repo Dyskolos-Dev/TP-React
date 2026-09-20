@@ -1,4 +1,4 @@
-// src/composants/FormulaireInscription.tsx
+
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import {
   valider,
@@ -20,9 +20,6 @@ export function FormulaireInscription({
   const [erreurs, setErreurs] = useState<Erreurs>({});
   const [envoiEnCours, setEnvoiEnCours] = useState(false);
 
-  // Un input classique transporte sa valeur dans `value` ; une case à
-  // cocher la transporte dans `checked`. On distingue les deux ici, une
-  // bonne fois pour toutes.
   const gererSaisie = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
     const valeur = type === "checkbox" ? checked : value;
@@ -36,7 +33,7 @@ export function FormulaireInscription({
     if (Object.keys(trouvees).length > 0) return;
 
     setEnvoiEnCours(true);
-    // Pas de serveur pour l'instant : on simule le délai réseau.
+
     window.setTimeout(() => {
       onInscription(donnees);
       setDonnees(valeursInitiales);

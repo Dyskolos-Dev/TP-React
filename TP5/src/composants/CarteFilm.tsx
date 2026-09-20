@@ -1,7 +1,4 @@
-// src/composants/CarteFilm.tsx
-//
-// Adaptateur : traduit un film OMDB en props pour la Carte, sans y
-// toucher. La liste qui l'utilise l'enveloppe dans un Link si besoin.
+
 
 import type { FilmOmdb } from "../lib/omdb";
 import { afficheDisponible } from "../lib/omdb";
@@ -12,8 +9,6 @@ export interface CarteFilmProps {
   film: FilmOmdb;
 }
 
-// L'API ne renvoie que ces trois valeurs en pratique, mais Type est un
-// string : on tolère l'inconnu plutôt que de mentir au compilateur.
 const libelles: Record<string, string> = {
   movie: "Film",
   series: "Série",

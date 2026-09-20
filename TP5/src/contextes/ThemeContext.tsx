@@ -1,6 +1,4 @@
-// src/contextes/ThemeContext.tsx
-//
-// Même patron que AuthContext et FavorisContext.
+
 
 import {
   createContext,

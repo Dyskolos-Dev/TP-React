@@ -1,4 +1,4 @@
-// src/composants/Badge.tsx
+
 
 export type TonBadge = "neutre" | "succes" | "info" | "attention";
 

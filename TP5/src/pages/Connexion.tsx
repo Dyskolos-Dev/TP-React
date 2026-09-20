@@ -1,4 +1,4 @@
-// src/pages/Connexion.tsx
+
 
 import { useState, type FormEvent } from "react";
 import { useLocation, useNavigate, type Location } from "react-router-dom";
@@ -26,8 +26,6 @@ export function Connexion() {
 
     connecter(propre);
 
-    // On revient là où on allait avant d'être redirigé vers /connexion,
-    // au lieu d'atterrir systématiquement sur l'accueil.
     const etat = emplacement.state as EtatRedirection | null;
     navigate(etat?.de?.pathname ?? "/", { replace: true });
   };

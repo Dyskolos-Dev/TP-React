@@ -1,4 +1,4 @@
-// src/pages/Favoris.tsx
+
 
 import { Link } from "react-router-dom";
 import { useFavoris } from "../contextes/FavorisContext";

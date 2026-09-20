@@ -1,7 +1,4 @@
-// src/lib/inscription.ts
-//
-// Aucun JSX ici : ce fichier décrit les données du formulaire et les
-// règles de validation qui s'y appliquent.
+
 
 export interface Inscription {
   prenom: string;
@@ -19,12 +16,8 @@ export const valeursInitiales: Inscription = {
   cgv: false,
 };
 
-// Dérivé de Inscription par keyof : une faute de frappe (erreurs.emial)
-// devient une erreur de compilation, et un nouveau champ est connu
-// immédiatement.
 export type Erreurs = Partial<Record<keyof Inscription, string>>;
 
-// Ce qu'on conserve après inscription : jamais le mot de passe.
 export type InscriptionEnregistree = Omit<
   Inscription,
   "motDePasse" | "confirmation"

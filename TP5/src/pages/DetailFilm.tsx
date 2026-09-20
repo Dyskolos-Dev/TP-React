@@ -1,4 +1,4 @@
-// src/pages/DetailFilm.tsx
+
 import { Link, useParams } from "react-router-dom";
 import { afficheDisponible, urlDetail, type FilmDetailOmdb } from "../lib/omdb";
 import { useFetch } from "../hooks/useFetch";
@@ -7,9 +7,7 @@ import { Badge } from "../composants/Badge";
 import { Bouton } from "../composants/Bouton";
 
 export function DetailFilm() {
-  // useParams renvoie toujours string | undefined, même sur une route
-  // qui garantit le paramètre : c'est exactement à ça que sert le
-  // `url: string | null` du hook.
+
   const { id } = useParams();
   const { donnees, chargement, erreur } = useFetch<FilmDetailOmdb>(
     id ? urlDetail(id) : null

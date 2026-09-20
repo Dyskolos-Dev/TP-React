@@ -1,7 +1,4 @@
-// src/contextes/AuthContext.tsx
-//
-// Connexion simulée : un pseudo suffit, aucun mot de passe, aucun
-// serveur.
+
 
 import { createContext, useContext, useState, type ReactNode } from "react";
 
@@ -29,9 +26,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   );
 }
 
-// Sans cette garde, un composant monté hors du Provider planterait dix
-// lignes plus loin avec un message incompréhensible. C'est la garde
-// qu'on lit dans le message d'erreur, pas le plantage.
 export function useAuth(): AuthContexte {
   const contexte = useContext(Contexte);
   if (contexte === undefined) {

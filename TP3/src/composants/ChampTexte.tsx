@@ -1,8 +1,8 @@
-// src/composants/ChampTexte.tsx
+
 import type { ChangeEvent } from "react";
 
 export interface ChampTexteProps {
-  nom: string; // sert d'id ET de name
+  nom: string;
   label: string;
   valeur: string;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;

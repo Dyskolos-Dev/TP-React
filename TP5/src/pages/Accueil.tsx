@@ -1,4 +1,4 @@
-// src/pages/Accueil.tsx
+
 import { Link } from "react-router-dom";
 
 export function Accueil() {

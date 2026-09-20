@@ -1,7 +1,4 @@
-// src/hooks/useFetch.ts
-//
-// Hook générique : il gère le transport (HTTP, annulation, erreurs
-// réseau), pas le contrat métier d'une API en particulier.
+
 
 import { useEffect, useState } from "react";
 
@@ -11,7 +8,6 @@ export interface EtatFetch<T> {
   erreur: string | null;
 }
 
-/** url à null = ne rien charger. */
 export function useFetch<T>(url: string | null): EtatFetch<T> {
   const [donnees, setDonnees] = useState<T | null>(null);
   const [chargement, setChargement] = useState(false);
@@ -50,7 +46,6 @@ export function useFetch<T>(url: string | null): EtatFetch<T> {
   return { donnees, chargement, erreur };
 }
 
-/** Renvoie `valeur`, mais seulement après un temps de calme. */
 export function useDebounce<T>(valeur: T, delai = 400): T {
   const [differee, setDifferee] = useState(valeur);
 

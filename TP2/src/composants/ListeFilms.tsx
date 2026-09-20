@@ -1,4 +1,4 @@
-// src/composants/ListeFilms.tsx
+
 import type { Film, StatutFilm } from "../lib/utils";
 import { Badge, type TonBadge } from "./Badge";
 import { Bouton } from "./Bouton";
@@ -10,8 +10,6 @@ export interface ListeFilmsProps {
   onSelection?: (film: Film) => void;
 }
 
-// Correspondance statut → badge, rangée dans un objet indexé par l'union :
-// oublier un statut ici devient une erreur de compilation.
 const badgeParStatut: Record<StatutFilm, { libelle: string; ton: TonBadge }> = {
   vu: { libelle: "Déjà vu", ton: "succes" },
   a_voir: { libelle: "À voir", ton: "info" },
